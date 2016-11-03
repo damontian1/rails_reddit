@@ -18,4 +18,4 @@ group :development do
 end
 gem 'devise', '~> 4.2'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.5.1'
-
+gem 'acts_as_votable', '~> 0.10.0'
