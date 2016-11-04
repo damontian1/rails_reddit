@@ -14,3 +14,14 @@
 	<% end %>
 		<%= link_to 'Back', links_path %>
 </div>
+
+
+<h3><%= @link.comments.count%> Comment(s)</h3>
+<hr>
+<div>
+	<%= render :partial => @link.comments %> 
+</div>
+<%= simple_form_for [@link, Comment.new] do |f| %>
+	<%= f.text_field :body, class: "form-control" %>
+	<%= f.submit class: "btn btn-default pull-right" %>
+<% end %>
